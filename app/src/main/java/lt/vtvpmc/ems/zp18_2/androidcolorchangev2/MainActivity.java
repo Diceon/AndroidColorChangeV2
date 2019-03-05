@@ -1,7 +1,9 @@
 package lt.vtvpmc.ems.zp18_2.androidcolorchangev2;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 
@@ -25,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         btnGreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetColors();
                 findViewById(R.id.colorGreenLayout).setBackgroundColor(getResources().getColor(R.color.colorGreen));
             }
         });
@@ -32,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btnRed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetColors();
                 findViewById(R.id.colorRedLayout).setBackgroundColor(getResources().getColor(R.color.colorRed));
             }
         });
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnBlue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetColors();
                 findViewById(R.id.colorBlueLayout).setBackgroundColor(getResources().getColor(R.color.colorBlue));
             }
         });
@@ -46,9 +51,18 @@ public class MainActivity extends AppCompatActivity {
         btnYellow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                resetColors();
                 findViewById(R.id.colorYellowLayout).setBackgroundColor(getResources().getColor(R.color.colorYellow));
             }
         });
 
     }
+
+    private void resetColors() {
+        findViewById(R.id.colorRedLayout).setBackgroundColor(Color.TRANSPARENT);
+        findViewById(R.id.colorGreenLayout).setBackgroundColor(Color.TRANSPARENT);
+        findViewById(R.id.colorBlueLayout).setBackgroundColor(Color.TRANSPARENT);
+        findViewById(R.id.colorYellowLayout).setBackgroundColor(Color.TRANSPARENT);
+    }
+
 }
